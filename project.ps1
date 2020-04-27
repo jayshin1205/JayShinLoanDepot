@@ -22,13 +22,13 @@ function test {
     $secondSum = @()
     $total = @()
     $final = 0
-    [int] $i = 1
+    $i = 1
 
     # find all the multiples of 1st number and 2nd number
     # multiples of 1st number or multiples of 2nd number is less than 1000
     while (($mOfFirst -lt $lessThanValue) -or ($mOfSecond -lt $lessThanValue))
     {    
-        # multiples
+        # multiples of 1st and 2nd number
         $mOfFirst = $FirstNum * $i
         $mOfSecond = $SecondNum * $i
 
@@ -56,6 +56,7 @@ function test {
         $total = $firstSum + $secondSum
     }
 
+    # sum up the numbers in the $total array
     foreach ($num in $total)
     {
         $final += $num
